@@ -73,16 +73,11 @@ function greetUser() {
 
 greetUser();
 // 6
-function proceedAction() {
-  let daaklikemaggilaksbijo = confirm("Do you want to proceed?");
-
-  if (daaklikemaggilaksbijo) {
+function proceedAction(shouldProceed) {
+  if (shouldProceed && confirm("Do you want to proceed?")) {
     return "Action confirmed.";
-  } else {
-    return "Action canceled.";
   }
+  return "Action canceled.";
 }
 
-let result = proceedAction();
-console.log(result);
-proceedAction();
+console.log(proceedAction(true));
